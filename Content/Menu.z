@@ -4,9 +4,11 @@ class Menu : ZilchComponent
     var AMenu : Level = Level.Find("AMenu");
     var MMenu : Level = Level.Find("Menu");
     
-      var Lev1 : Real3 = Real3(22.8437, 10.93, 1);
-      var Lev2 : Real3 = Real3(22.8437, 9.23, 1);
-      var Lev3 : Real3 = Real3(22.8437, 7.53, 1);
+      var Lev1 : Real3 = Real3(20.4655, 10.93, 1);
+      var Lev2 : Real3 = Real3(20.4655, 9.23, 1);
+      var Lev3 : Real3 = Real3(20.4655, 7.53, 1);
+      var Lev4 : Real3 = Real3(20.4655, 5.83, 1);
+      var Lev5 : Real3 = Real3(20.4655, 4.13, 1);
       
       var Sel : Integer = 1;
       var LSel : Integer = 0;
@@ -19,9 +21,11 @@ class Menu : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-     var wip1 = this.Space.FindObjectByName("wip1");
-     var un2 = this.Space.FindObjectByName("Untitled 2");
-     var un3 = this.Space.FindObjectByName("Untitled 3");
+     var gM = this.Space.FindObjectByName("Ginga");
+     var eF = this.Space.FindObjectByName("Eternal");
+     var oF = this.Space.FindObjectByName("Ooraka");
+     var tC = this.Space.FindObjectByName("Cosmos");
+     var aN = this.Space.FindObjectByName("North");
         
       var stgSel = this.Space.FindObjectByName("stageSelection");
 
@@ -30,22 +34,22 @@ if(this.Space.CurrentLevel == this.MMenu){
       if (Zero.Keyboard.KeyIsPressed(Keys.Up))
       {
       this.Sel -= 1;
-        if(this.Sel > 3){
+        if(this.Sel > 5){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 3;
+            this.Sel = 5;
         }
       }
       
       if (Zero.Keyboard.KeyIsPressed(Keys.Down))
       {
       this.Sel += 1;
-        if(this.Sel > 3){
+        if(this.Sel > 5){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 3;
+            this.Sel = 5;
         }
       }
       
@@ -58,11 +62,16 @@ if(this.Space.CurrentLevel == this.MMenu){
       if(this.Sel == 3){
           stgSel.Transform.Translation = this.Lev3;
       }
+      if(this.Sel == 4){
+          stgSel.Transform.Translation = this.Lev4;
+      }
+      if(this.Sel == 5){
+          stgSel.Transform.Translation = this.Lev5;
+      }
       
      if(stgSel.Transform.Translation == this.Lev1){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
             this.Space.LoadLevel(this.AMenu);
-
           }
       }
       
@@ -84,9 +93,12 @@ if(this.LSel == 1){
         }
 } 
  
-
   
-  
-}  
+}
+//Debug
+      if (Zero.Keyboard.KeyIsDown(Keys.NumPad1))
+      {
+          this.Space.LoadLevel(this.A1);
+      }    
     }
 }

@@ -16,7 +16,7 @@ class StageTimer : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.DataCog = Zero.ObjectStore.RestoreOrArchetype("TimeData", "SavedData", this.Space);
-        this.Space.FindObjectByName("bestTime").SpriteText.Text = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
+       // this.Space.FindObjectByName("bestTime").SpriteText.Text = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -56,7 +56,7 @@ this.Time += event.Dt;
         var curTime : String = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
     
         display.SpriteText.Text = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
-        pB.SpriteText.Text = "`this.DataCog.SavedTime.Time`";
+        //pB.SpriteText.Text = "`this.DataCog.SavedTime.Time`";
 
         
         /*if(this.Space.FindObjectByName("Goal").TimeSaveFlag.Save == true){

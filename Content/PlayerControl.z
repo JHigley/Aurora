@@ -1,6 +1,7 @@
 class PlayerControl : ZilchComponent
 {
     var Menu : Level = Level.Find("Menu");
+
     
     function Initialize(init : CogInitializer)
     {
@@ -94,7 +95,6 @@ if(player.RigidBody.Velocity.Y <= -75){
       if(this.Space.FindObjectByName("fade").Sprite.Color == Real4(0,0,0,2)){
           this.Space.LoadLevel(this.Menu);
       }
-  
   
  if(player.Transform.Translation.X > 29){
 cam.Transform.Translation = Real3(57, 0, 40);

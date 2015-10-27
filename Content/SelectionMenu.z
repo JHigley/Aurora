@@ -1,6 +1,6 @@
 class SelectionMenu : ZilchComponent
 {
-    var A1 : Level = Level.Find("Level");
+    var G1 : Level = Level.Find("Ginga_1");
     var A2 : Level = Level.Find("Level2");
     var A3 : Level = Level.Find("Level3");
 
@@ -23,7 +23,7 @@ class SelectionMenu : ZilchComponent
  
 if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     if(this.LSel == 1){
-        this.Space.LoadLevel(this.A1);
+        this.Space.LoadLevel(this.G1);
     }
 }
 
@@ -42,7 +42,7 @@ if (Zero.Keyboard.KeyIsPressed(Keys.Left)){
 }
 
 if(this.LSel == 1){
-    lText.SpriteText.Text = "level 1";
+    lText.SpriteText.Text = "Ginga Mountains 1";
 }
 if(this.LSel == 2){
     lText.SpriteText.Text = "level 2";
@@ -55,7 +55,7 @@ if(this.LSel == 3){
 
 if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     if(this.LSel == 1){
-        this.Space.LoadLevel(this.A1);
+        this.Space.LoadLevel(this.G1);
     }
     if(this.LSel == 2){
         this.Space.LoadLevel(this.A2);
