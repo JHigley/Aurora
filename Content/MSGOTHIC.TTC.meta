@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "MSGOTHIC",
+		uint64 ResourceId = 560aa4c82d446173,
+	},
+},

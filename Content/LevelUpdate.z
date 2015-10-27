@@ -1,0 +1,42 @@
+class LevelUpdate : ZilchComponent
+{
+    var A3 : Level = Level.Find("Level3");
+    var A2 : Level = Level.Find("Level2");
+    var A1 : Level = Level.Find("Level");
+    var Menu : Level = Level.Find("Menu");
+    
+    [Property]
+    var Level1_Complete : Integer = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var fade = this.Space.FindObjectByName("fade");
+        var curLev = this.Space.CurrentLevel;
+        if(fade.Sprite.Color == Real4(0,0,0,1)){
+            if(curLev == this.A1){
+                this.Space.LoadLevel(this.A2);
+            }
+            else if(curLev == this.A2){
+                this.Space.LoadLevel(this.A3);
+            }
+            else if(curLev == this.A3){
+                this.Space.LoadLevel(this.Menu);
+            }
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent){
+        var vObj = event.OtherObject;
+        
+        if(this.Space.CurrentLevel == this.A1){
+            if(vObj.Name == "FOMark"){
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+class Menu : ZilchComponent
+{
+    var A1 : Level = Level.Find("Level");
+    var AMenu : Level = Level.Find("AMenu");
+    var MMenu : Level = Level.Find("Menu");
+    
+      var Lev1 : Real3 = Real3(22.8437, 10.93, 1);
+      var Lev2 : Real3 = Real3(22.8437, 9.23, 1);
+      var Lev3 : Real3 = Real3(22.8437, 7.53, 1);
+      
+      var Sel : Integer = 1;
+      var LSel : Integer = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Action.Property(this.Space.FindObjectByName("fade").Actions, @this.Space.FindObjectByName("fade").Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+     var wip1 = this.Space.FindObjectByName("wip1");
+     var un2 = this.Space.FindObjectByName("Untitled 2");
+     var un3 = this.Space.FindObjectByName("Untitled 3");
+        
+      var stgSel = this.Space.FindObjectByName("stageSelection");
+
+//Main Menu Interaction
+if(this.Space.CurrentLevel == this.MMenu){      
+      if (Zero.Keyboard.KeyIsPressed(Keys.Up))
+      {
+      this.Sel -= 1;
+        if(this.Sel > 3){
+            this.Sel = 1;
+        }
+        if(this.Sel < 1){
+            this.Sel = 3;
+        }
+      }
+      
+      if (Zero.Keyboard.KeyIsPressed(Keys.Down))
+      {
+      this.Sel += 1;
+        if(this.Sel > 3){
+            this.Sel = 1;
+        }
+        if(this.Sel < 1){
+            this.Sel = 3;
+        }
+      }
+      
+      if(this.Sel == 1){
+          stgSel.Transform.Translation = this.Lev1;
+      }
+      if(this.Sel == 2){
+          stgSel.Transform.Translation = this.Lev2;
+      }
+      if(this.Sel == 3){
+          stgSel.Transform.Translation = this.Lev3;
+      }
+      
+     if(stgSel.Transform.Translation == this.Lev1){
+         if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
+            this.Space.LoadLevel(this.AMenu);
+
+          }
+      }
+      
+
+      
+      if(this.Space.LevelSettings.LevelUpdate.Level1_Complete == 1){
+        //  this.Space.FindObjectByName("Icon1").Sprite.SpriteSource();
+      }
+  }
+  
+//Level Selection Menu Interaction  
+  
+if(this.Space.CurrentLevel == this.AMenu){   
+
+ 
+if(this.LSel == 1){
+        if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
+            this.Space.LoadLevel(this.A1);
+        }
+} 
+ 
+
+  
+  
+}  
+    }
+}

@@ -1,0 +1,19 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TimeData",
+	},
+	Archetyped = 
+	{
+		string Name = "560819308983bfc3:SavedData",
+	},
+	SavedTime = 
+	{
+		string Time = "00:00:00",
+	},
+},

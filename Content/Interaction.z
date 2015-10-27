@@ -1,0 +1,42 @@
+class Interaction : ZilchComponent
+{
+    var A1 : Level = Level.Find("Level");
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var select = this.Space.FindObjectByName("Selection");
+        var kanon = this.Space.FindObjectByName("kanon");
+        
+        var shotSpawn = Real3(13.3298,2.22049,0);
+        var shotArche = Archetype.Find("shot");
+        
+if(this.Space.CurrentLevel == this.A1){
+        if(Zero.Keyboard.KeyIsDown(Keys.Up)){
+            select.Transform.Translation = Real3(16.8,1.5,1);
+            select.Sprite.Visible = true;
+        }
+        
+        if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
+            if(select.Transform.Translation.X == 16.8){
+                
+                this.Space.CreateAtPosition(shotArche, shotSpawn);
+                
+            }
+        }
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var oObj = event.OtherObject;
+        
+        if(oObj == this.Space.FindObjectByName("Tut1Trig")){
+            Action.Property(this.Space.FindObjectByName("GravTutorial").Actions, @this.Space.FindObjectByName("GravTutorial").SpriteText.Color, Real4(0,0,0,1), 0.5, Ease.QuadInOut);
+        }
+    }
+}

@@ -1,0 +1,5 @@
+class SavedTime : ZilchComponent
+{
+    [Serialized]
+    var Time : String = "00:00:00";
+}

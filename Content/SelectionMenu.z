@@ -1,0 +1,69 @@
+class SelectionMenu : ZilchComponent
+{
+    var A1 : Level = Level.Find("Level");
+    var A2 : Level = Level.Find("Level2");
+    var A3 : Level = Level.Find("Level3");
+
+    var AMenu : Level = Level.Find("AMenu");
+    var MMenu : Level = Level.Find("Menu");
+    var LSel : Integer = 1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Action.Property(this.Space.FindObjectByName("fade").Actions, @this.Space.FindObjectByName("fade").Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+      var stgSel = this.Space.FindObjectByName("stageSelection");
+      var lText = this.Space.FindObjectByName("LevelName");
+      var icon = this.Space.FindObjectByName("icon");
+
+
+ 
+if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
+    if(this.LSel == 1){
+        this.Space.LoadLevel(this.A1);
+    }
+}
+
+
+if (Zero.Keyboard.KeyIsPressed(Keys.Right)){
+    this.LSel += 1;
+        if(this.LSel > 3){
+            this.LSel = 3;
+        }
+}
+if (Zero.Keyboard.KeyIsPressed(Keys.Left)){
+    this.LSel -= 1;
+        if(this.LSel < 1){
+            this.LSel = 1;
+        }
+}
+
+if(this.LSel == 1){
+    lText.SpriteText.Text = "level 1";
+}
+if(this.LSel == 2){
+    lText.SpriteText.Text = "level 2";
+   // icon.Sprite.SpriteSource = 
+}
+if(this.LSel == 3){
+    lText.SpriteText.Text = "level 3";
+}
+
+
+if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
+    if(this.LSel == 1){
+        this.Space.LoadLevel(this.A1);
+    }
+    if(this.LSel == 2){
+        this.Space.LoadLevel(this.A2);
+    }
+    if(this.LSel == 3){
+        this.Space.LoadLevel(this.A3);
+    }
+}
+
+    }
+}

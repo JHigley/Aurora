@@ -1,0 +1,107 @@
+class PlayerControl : ZilchComponent
+{
+    var Menu : Level = Level.Find("Menu");
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space,   Events.LogicUpdate,    this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+
+        var player = this.Space.FindObjectByName("Sphere");
+        var cam = this.Space.FindObjectByName("Camera");
+
+        
+        
+//Arrow Controls 
+        
+    var velocity = local Real3(0,0,0);
+
+      if (Zero.Keyboard.KeyIsDown(Keys.Right))
+      {
+          velocity += local Real3(0.8,0,0);
+      }
+      if (Zero.Keyboard.KeyIsDown(Keys.Left))
+      {
+          velocity += local Real3(-0.8,0,0);
+    }
+    
+if(player.RigidBody.Velocity.X <= -20){
+        velocity -= local Real3(-1,0,0);
+}
+
+if(player.RigidBody.Velocity.X >= 20){
+        velocity -= local Real3(1,0,0);
+}
+
+if(player.RigidBody.Velocity.Y <= -75){
+        velocity -= local Real3(0,-1,0);
+}
+  
+    
+      if (Zero.Keyboard.KeyIsDown(Keys.A))
+      {  
+          Action.Property(player.Actions, @player.Sprite.Color, Real4(0.5,0,0,1), 0.1, Ease.QuadInOut);
+          player.DragEffect.Drag = 4;
+      }
+      else if(Zero.Keyboard.KeyIsDown(Keys.S)){
+         /* Action.Property(player.Actions, @player.Sprite.Color, Real4(0,0.7,0.8,1), 0.1, Ease.QuadInOut);
+          
+              if (Zero.Keyboard.KeyIsDown(Keys.Right))
+              {
+                  velocity += local Real3(1.5,0,0);
+              }
+              
+              if (Zero.Keyboard.KeyIsDown(Keys.Left))
+              {
+                  velocity += local Real3(-1.5,0,0);
+              } */
+              
+         Action.Property(player.Actions, @player.Sprite.Color, Real4(0.3,0,0.3,1), 0.1, Ease.QuadInOut);
+         this.LevelSettings.GravityEffect.Direction = Real3(0,10,0);
+         //velocity = local Real3(0,0,0);
+         
+              /*if (Zero.Keyboard.KeyIsDown(Keys.Right))
+              {
+                  velocity += local Real3(-0.8,0,0);
+              }
+              
+              if (Zero.Keyboard.KeyIsDown(Keys.Left))
+              {
+                  velocity += local Real3(0.8,0,0);
+              }*/
+         
+      }
+      else{
+          Action.Property(player.Actions, @player.Sprite.Color, Real4(0,0,0,1), 0.1, Ease.QuadInOut);
+          player.DragEffect.Drag = 0;
+          this.LevelSettings.GravityEffect.Direction = Real3(0,-1,0);
+      }
+    player.RigidBody.Velocity += velocity;
+
+//Reload   
+      if (Zero.Keyboard.KeyIsPressed(Keys.Space))
+      {
+          this.Space.ReloadLevel();
+      }
+      
+      if (Zero.Keyboard.KeyIsPressed(Keys.Tilde))
+      {
+      Action.Property(this.Space.FindObjectByName("fade").Actions, @this.Space.FindObjectByName("fade").Sprite.Color, Real4(0,0,0,2), 1, Ease.QuadInOut);
+      }
+      if(this.Space.FindObjectByName("fade").Sprite.Color == Real4(0,0,0,2)){
+          this.Space.LoadLevel(this.Menu);
+      }
+  
+  
+ if(player.Transform.Translation.X > 29){
+cam.Transform.Translation = Real3(57, 0, 40);
+} 
+else{
+    cam.Transform.Translation = Real3(0,0,40);
+}
+        
+    }
+}

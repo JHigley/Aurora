@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "StageTimer",
+		uint64 ResourceId = 560aa445445b4326,
+	},
+},

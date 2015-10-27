@@ -1,0 +1,21 @@
+class TimeSaveFlag : ZilchComponent
+{
+    [Property]
+    var Save : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+      Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
+    }
+
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        var otherObject = event.OtherObject;
+        
+        if(otherObject.Name == "Goal"){
+            this.Space.FindObjectByName("Goal").TimeSaveFlag.Save = true;
+        }
+        
+    }
+}

@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "SEGOEUI",
+		uint64 ResourceId = 560aa4e530f49a5a,
+	},
+},
