@@ -27,6 +27,9 @@ if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     }
 }
 
+if (Zero.Keyboard.KeyIsPressed(Keys.Tilde)){
+    this.Space.LoadLevel(this.MMenu);
+}
 
 if (Zero.Keyboard.KeyIsPressed(Keys.Right)){
     this.LSel += 1;

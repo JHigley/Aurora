@@ -68,7 +68,7 @@ Level =
 		},
 		ForwardRenderer = 
 		{
-			Vec4 ClearColor = [0.105748504, 0.0708499998, 0.129999995, 1],
+			Vec4 ClearColor = [0.189610496, 0.189050004, 0.189999998, 1],
 			bool DrawNonVisible = false,
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8811989,
+			float Size = 90.483757,
 		},
 		EditorCameraController = 
 		{
