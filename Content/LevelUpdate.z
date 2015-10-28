@@ -29,14 +29,15 @@ class LevelUpdate : ZilchComponent
                 this.Space.LoadLevel(this.Menu);
             }
         }
+        
+        if(this.Space.CurrentLevel == this.A2){
+            this.Level1_Complete = 1;
+        }
     }
     
     function OnCollisionStarted(event : CollisionEvent){
         var vObj = event.OtherObject;
         
-        if(this.Space.CurrentLevel == this.A1){
-            if(vObj.Name == "FOMark"){
-            }
-        }
+
     }
 }

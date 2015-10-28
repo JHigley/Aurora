@@ -78,7 +78,10 @@ if(this.Space.CurrentLevel == this.MMenu){
 
       
       if(this.Space.LevelSettings.LevelUpdate.Level1_Complete == 1){
-        //  this.Space.FindObjectByName("Icon1").Sprite.SpriteSource;
+        this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("complete");
+      }
+      else{
+        this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("incomplete");
       }
   }
   

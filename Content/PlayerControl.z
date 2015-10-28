@@ -48,7 +48,7 @@ if(player.RigidBody.Velocity.Y <= -75){
           player.DragEffect.Drag = 4;
       }
       else if(Zero.Keyboard.KeyIsDown(Keys.S)){
-         /* Action.Property(player.Actions, @player.Sprite.Color, Real4(0,0.7,0.8,1), 0.1, Ease.QuadInOut);
+          Action.Property(player.Actions, @player.Sprite.Color, Real4(0,0.7,0.8,1), 0.1, Ease.QuadInOut);
           
               if (Zero.Keyboard.KeyIsDown(Keys.Right))
               {
@@ -58,22 +58,12 @@ if(player.RigidBody.Velocity.Y <= -75){
               if (Zero.Keyboard.KeyIsDown(Keys.Left))
               {
                   velocity += local Real3(-1.5,0,0);
-              } */
-              
+              } 
+      }
+//debug grav  
+      else if(Zero.Keyboard.KeyIsDown(Keys.G)){
          Action.Property(player.Actions, @player.Sprite.Color, Real4(0.3,0,0.3,1), 0.1, Ease.QuadInOut);
          this.LevelSettings.GravityEffect.Direction = Real3(0,10,0);
-         //velocity = local Real3(0,0,0);
-         
-              /*if (Zero.Keyboard.KeyIsDown(Keys.Right))
-              {
-                  velocity += local Real3(-0.8,0,0);
-              }
-              
-              if (Zero.Keyboard.KeyIsDown(Keys.Left))
-              {
-                  velocity += local Real3(0.8,0,0);
-              }*/
-         
       }
       else{
           Action.Property(player.Actions, @player.Sprite.Color, Real4(0,0,0,1), 0.1, Ease.QuadInOut);
@@ -102,6 +92,11 @@ cam.Transform.Translation = Real3(57, 0, 40);
 else{
     cam.Transform.Translation = Real3(0,0,40);
 }
+
+ if(player.Transform.Translation.X > 85.5){
+cam.Transform.Translation = Real3(114, 0, 40);
+} 
+
         
     }
 }
