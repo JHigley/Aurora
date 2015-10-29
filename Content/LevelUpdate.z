@@ -32,7 +32,7 @@ class LevelUpdate : ZilchComponent
     {
         var fade = this.Space.FindObjectByName("fade");
         var curLev = this.Space.CurrentLevel;
-        if(fade.Sprite.Color == Real4(0,0,0,1)){
+       /* if(fade.Sprite.Color == Real4(0,0,0,1)){
             if(curLev == this.Ginga1){
                 this.Space.LoadLevel(this.A2);
             }
@@ -42,7 +42,7 @@ class LevelUpdate : ZilchComponent
             else if(curLev == this.A3){
                 this.Space.LoadLevel(this.Menu);
             }
-        }
+        }*/
         
         if(this.Space.CurrentLevel == this.A2){
             this.Ginga_Complete = 1;

@@ -9,6 +9,12 @@ class Menu : ZilchComponent
       var Lev3 : Real3 = Real3(20.4655, 7.53, 1);
       var Lev4 : Real3 = Real3(20.4655, 5.83, 1);
       var Lev5 : Real3 = Real3(20.4655, 4.13, 1);
+
+// Reserved slot      
+      var Lev7 : Real3 = Real3(20.4655, 4.13, 1);
+      var Lev8 : Real3 = Real3(20.4655, 4.13, 1);
+
+// Credits      
       var Lev6 : Real3 = Real3(20.4655, -12.87, 1);
       
       var Sel : Integer = 1;
@@ -16,7 +22,12 @@ class Menu : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Action.Property(this.Space.FindObjectByName("fade").Actions, @this.Space.FindObjectByName("fade").Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+        
+        var opFade = this.Space.FindObjectByName("openingFade");
+        var opFadeSeq = Action.Sequence(opFade.Actions);
+        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,1), 7, Ease.QuadInOut);
+        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+
 
     }
 
