@@ -9,6 +9,7 @@ class Menu : ZilchComponent
       var Lev3 : Real3 = Real3(20.4655, 7.53, 1);
       var Lev4 : Real3 = Real3(20.4655, 5.83, 1);
       var Lev5 : Real3 = Real3(20.4655, 4.13, 1);
+      var Lev6 : Real3 = Real3(20.4655, -12.87, 1);
       
       var Sel : Integer = 1;
       var LSel : Integer = 0;
@@ -26,6 +27,7 @@ class Menu : ZilchComponent
      var oF = this.Space.FindObjectByName("Ooraka");
      var tC = this.Space.FindObjectByName("Cosmos");
      var aN = this.Space.FindObjectByName("North");
+     var cR = this.Space.FindObjectByName("Credits");
         
       var stgSel = this.Space.FindObjectByName("stageSelection");
 
@@ -34,22 +36,22 @@ if(this.Space.CurrentLevel == this.MMenu){
       if (Zero.Keyboard.KeyIsPressed(Keys.Up))
       {
       this.Sel -= 1;
-        if(this.Sel > 5){
+        if(this.Sel > 6){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 5;
+            this.Sel = 6;
         }
       }
       
       if (Zero.Keyboard.KeyIsPressed(Keys.Down))
       {
       this.Sel += 1;
-        if(this.Sel > 5){
+        if(this.Sel > 6){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 5;
+            this.Sel = 6;
         }
       }
       
@@ -68,6 +70,9 @@ if(this.Space.CurrentLevel == this.MMenu){
       if(this.Sel == 5){
           stgSel.Transform.Translation = this.Lev5;
       }
+      if(this.Sel == 6){
+          stgSel.Transform.Translation = this.Lev6;
+      }
       
      if(stgSel.Transform.Translation == this.Lev1){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
@@ -77,7 +82,7 @@ if(this.Space.CurrentLevel == this.MMenu){
       
 
       
-      if(this.Space.LevelSettings.LevelUpdate.Level1_Complete == 1){
+      if(this.Space.LevelSettings.LevelUpdate.Ginga_Complete == 1){
         this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("complete");
       }
       else{
