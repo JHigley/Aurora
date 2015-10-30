@@ -16,6 +16,7 @@ class FadeOut : ZilchComponent
         if(otherObject.Name == "FOmark"){
             var fadeSeq = Action.Sequence(fade.Actions);
             Action.Property(fadeSeq, @fade.Sprite.Color, Real4(0,0,0,1), 1, Ease.QuadInOut);
+            this.Space.FindObjectByName("Sphere").RigidBody.Velocity = Real3(0,0,0);
         }
     }
 }

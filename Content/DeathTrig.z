@@ -10,7 +10,7 @@ class DeathTrig : ZilchComponent
         var otherObject = event.OtherObject;
 
        
-       if(otherObject.BoxCollider.CollisionGroup.Name == "DeathBarrier"){
+       if(otherObject.Name == "Sphere"){
             this.Space.ReloadLevel();
         }
     }

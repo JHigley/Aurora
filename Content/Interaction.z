@@ -35,8 +35,8 @@ if(this.Space.CurrentLevel == this.A1){
     {
         var oObj = event.OtherObject;
         
-        if(oObj == this.Space.FindObjectByName("Tut1Trig")){
-            Action.Property(this.Space.FindObjectByName("GravTutorial").Actions, @this.Space.FindObjectByName("GravTutorial").SpriteText.Color, Real4(0,0,0,1), 0.5, Ease.QuadInOut);
+        if(oObj == this.Space.FindObjectByName("Trigger")){
+            Action.Property(this.Space.FindObjectByName("Text").Actions, @this.Space.FindObjectByName("Text").SpriteText.Color, Real4(0,0,0,1), 0.5, Ease.QuadInOut);
         }
     }
 }

@@ -25,10 +25,11 @@ class Menu : ZilchComponent
         
         var opFade = this.Space.FindObjectByName("openingFade");
         var opFadeSeq = Action.Sequence(opFade.Actions);
-        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,1), 7, Ease.QuadInOut);
+      /*  Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,1), 7, Ease.QuadInOut);
+        Action.Property(this.Space.FindObjectByName("Logo Name").Actions, @this.Space.FindObjectByName("Logo Name").Sprite.Color, Real4(0,0,0,0), 7, Ease.QuadInOut);
+        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);*/
+        
         Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
-
-
     }
 
     function OnLogicUpdate(event : UpdateEvent)
