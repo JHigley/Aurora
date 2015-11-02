@@ -22,6 +22,9 @@ class LevelUpdate : ZilchComponent
     
     [Property]
     var Aurora_Complete : Integer = 0;
+
+
+    var CurrentLevel : Integer = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -33,26 +36,32 @@ class LevelUpdate : ZilchComponent
     {
         var fade = this.Space.FindObjectByName("fade");
         var curLev = this.Space.CurrentLevel;
-       /* if(fade.Sprite.Color == Real4(0,0,0,1)){
-            if(curLev == this.Ginga1){
-                this.Space.LoadLevel(this.Ginga2);
-            }
-            else if(curLev == this.Ginga2){
-                this.Space.LoadLevel(this.A3);
-            }
-            else if(curLev == this.A3){
-                this.Space.LoadLevel(this.Menu);
-            }
-        }*/
+
         
-        if(this.Space.CurrentLevel == this.A2){
+
+       /* if(this.Space.CurrentLevel == this.A2){
             this.Ginga_Complete = 1;
-        }
+        }*/
     }
     
     function OnCollisionStarted(event : CollisionEvent){
         var vObj = event.OtherObject;
-        
+ 
+         if(vObj.Name == "Sphere"){
+            this.CurrentLevel += 1;
+        Console.WriteLine("`this.CurrentLevel`");  
+                  
+            if(this.CurrentLevel == 1){
+                this.Space.LoadLevel(this.Ginga2);
+            this.CurrentLevel += 1;
+            }
+            else if(this.CurrentLevel == 2){
+                this.Space.LoadLevel(this.A3);
+            }
+            else if(this.CurrentLevel == 3){
+                this.Space.LoadLevel(this.Menu);
+            }
+        }       
 
     }
 }

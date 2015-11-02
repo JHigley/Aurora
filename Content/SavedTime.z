@@ -1,5 +1,11 @@
 class SavedTime : ZilchComponent
 {
     [Serialized]
-    var Time : String = "00:00:00";
+    var Ginga1 : String = "00:00:00";
+    
+    [Serialized]    
+    var Ginga2 : String = "00:00:00";
+    
+    [Serialized]   
+    var Ginga3 : String = "00:00:00";
 }

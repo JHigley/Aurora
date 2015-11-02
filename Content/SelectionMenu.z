@@ -8,10 +8,15 @@ class SelectionMenu : ZilchComponent
     var AMenu : Level = Level.Find("AMenu");
     var MMenu : Level = Level.Find("Menu");
     var LSel : Integer = 1;
+    
+    var DataCog : Cog = null;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Action.Property(this.Space.FindObjectByName("fade").Actions, @this.Space.FindObjectByName("fade").Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+        
+        this.DataCog = Zero.ObjectStore.RestoreOrArchetype("Data", "SavedData", this.Space);
+        this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ginga1`";
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -47,15 +52,18 @@ if (Zero.Keyboard.KeyIsPressed(Keys.Left)){
 
 if(this.LSel == 1){
     lText.SpriteText.Text = "Ginga Mountains 1";
-    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_1"); 
+    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_1");
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ginga1`";
 }
 if(this.LSel == 2){
     lText.SpriteText.Text = "2";
     icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_2"); 
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ginga2`";
 }
 if(this.LSel == 3){
     lText.SpriteText.Text = "level 3";
     icon.Sprite.SpriteSource = SpriteSource.Find("a1");
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ginga3`";
 }
 
 

@@ -13,8 +13,8 @@ class TimeSaveFlag : ZilchComponent
     {
         var otherObject = event.OtherObject;
         
-        if(otherObject.Name == "Goal"){
-            this.Space.FindObjectByName("Goal").TimeSaveFlag.Save = true;
+        if(otherObject.Name == "Sphere"){
+            this.Space.FindObjectByName("FOmark").TimeSaveFlag.Save = true;
         }
         
     }

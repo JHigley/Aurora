@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "TimeData",
+		string Name = "Data",
 	},
 	Archetyped = 
 	{
@@ -14,6 +14,6 @@ Cog =
 	},
 	SavedTime = 
 	{
-		string Time = "00:00:00",
+		string TimeString = "00:00:00",
 	},
 },

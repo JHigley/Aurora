@@ -1,6 +1,9 @@
 class StageTimer : ZilchComponent
 {
 
+    var Ginga1: Level = Level.Find("Ginga_1");
+    var Ginga2: Level = Level.Find("Ginga_2");
+
         var Time : Real = 0;
         var Seconds : Real = 0;
         var Minutes : Real = 0;
@@ -10,13 +13,15 @@ class StageTimer : ZilchComponent
         var HMinute : Real = 0;
         var HHour : Real = 0;
         
-        var DataCog: Cog = null;
+        //var TimeString : String = "00:00:00";
+        var DataCog : Cog = null;
         
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        this.DataCog = Zero.ObjectStore.RestoreOrArchetype("TimeData", "SavedData", this.Space);
-       // this.Space.FindObjectByName("bestTime").SpriteText.Text = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
+        
+        this.DataCog = Zero.ObjectStore.RestoreOrArchetype("Data", "SavedData", this.Space);
+        this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ginga1`";
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -54,8 +59,20 @@ this.Time += event.Dt;
     }
 
         var curTime : String = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
+        
+        if(this.Space.FindObjectByName("FOmark").TimeSaveFlag.Save == true){
+            if(this.Space.CurrentLevel == this.Ginga1){
+                this.DataCog.SavedTime.Ginga1 = curTime;
+                Zero.ObjectStore.Store("Data", this.DataCog);
+            }
+            if(this.Space.CurrentLevel == this.Ginga2){
+                this.DataCog.SavedTime.Ginga2 = curTime;
+                Zero.ObjectStore.Store("Data", this.DataCog);
+            }
+        }
     
         display.SpriteText.Text = "`this.HHour``this.Hours`:`this.HMinute``this.Minutes`:`this.HSecond``this.Seconds`";
+        
         //pB.SpriteText.Text = "`this.DataCog.SavedTime.Time`";
 
         
