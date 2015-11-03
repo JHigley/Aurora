@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "Ginga_2",
-		uint64 ResourceId = 56243370eace6e7d,
+		uint64 ResourceId = 562ec00705dbe7bf,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
