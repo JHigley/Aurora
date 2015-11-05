@@ -5,6 +5,7 @@ class LevelUpdate : ZilchComponent
     var A1 : Level = Level.Find("Level");
     var Ginga1: Level = Level.Find("Ginga_1");
     var Ginga2: Level = Level.Find("Ginga_2");
+    var Ginga3: Level = Level.Find("Ginga_3");
     
     var Menu : Level = Level.Find("Menu");
     
@@ -48,17 +49,16 @@ class LevelUpdate : ZilchComponent
         var vObj = event.OtherObject;
  
          if(vObj.Name == "Sphere"){
-            this.CurrentLevel += 1;
-        Console.WriteLine("`this.CurrentLevel`");  
+           // this.CurrentLevel += 1;
+           // Console.WriteLine("`this.CurrentLevel`");  
                   
-            if(this.CurrentLevel == 1){
+            if(this.Space.CurrentLevel == this.Ginga1){
                 this.Space.LoadLevel(this.Ginga2);
-            this.CurrentLevel += 1;
             }
-            else if(this.CurrentLevel == 2){
-                this.Space.LoadLevel(this.A3);
+            else if(this.Space.CurrentLevel == this.Ginga2){
+                this.Space.LoadLevel(this.Ginga3);
             }
-            else if(this.CurrentLevel == 3){
+            else if(this.Space.CurrentLevel == this.Ginga3){
                 this.Space.LoadLevel(this.Menu);
             }
         }       

@@ -2,6 +2,7 @@ class SelectionMenu : ZilchComponent
 {
     var G1 : Level = Level.Find("Ginga_1");
     var G2 : Level = Level.Find("Ginga_2");
+    var G3 : Level = Level.Find("Ginga_3");
     var A2 : Level = Level.Find("Level2");
     var A3 : Level = Level.Find("Level3");
 
@@ -75,7 +76,7 @@ if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
         this.Space.LoadLevel(this.G2);
     }
     if(this.LSel == 3){
-        this.Space.LoadLevel(this.A3);
+        this.Space.LoadLevel(this.G3);
     }
 }
 

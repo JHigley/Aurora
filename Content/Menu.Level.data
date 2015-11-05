@@ -281,8 +281,8 @@ Level =
 			ParticleRenderMode RenderMode = Additive,
 			ParticleSortMode SortMode = Youngest,
 			ParticleAnimation ParticleAnimation = Single,
-			string Texture = "4fab71e8bcb7a8ce:DefaultTexture",
-			Vec4 Tint = [0.0666666701, 0.0666666701, 0.0666666701, 1],
+			string Texture = "562c2e4810ca51e8:Rain",
+			Vec4 Tint = [0.0666666701, 0.0666666701, 0.0666666701, 0.449999988],
 			float VelocityScale = 0.5,
 			float LengthScale = 1,
 			float MaxParticleSize = 100,
@@ -309,7 +309,7 @@ Level =
 		{
 			bool Active = true,
 			uint EmitCount = 0,
-			float EmitRate = 2000,
+			float EmitRate = 1500,
 			float EmitVariance = 0,
 			float Size = 0.100000001,
 			float SizeVariance = 0.100000001,
@@ -590,7 +590,7 @@ Level =
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -1180,6 +1180,41 @@ Level =
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string SpriteSource = "56245dc778c88cee:Credit_Name_Black",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.39885521, -0.769859314, -2],
+			Vec3 Scale = [1.14354074, 1.37368464, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "562ec1d6be2797ea:Ginga_BG4",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
