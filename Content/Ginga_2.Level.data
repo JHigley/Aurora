@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [73.1166534, 4.04357624, 50.0000076],
+			Vec3 Translation = [40.8008614, 7.20147133, 50.0000076],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [73.1166534, 4.04357624, 7.92189076e-006],
+			Vec3 LookTarget = [40.8008614, 7.20147133, 6.50932316e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -432,7 +432,7 @@ Level =
 		},
 		Sprite = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,

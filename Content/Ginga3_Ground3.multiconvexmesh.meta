@@ -2,8 +2,8 @@ BinaryContent =
 {
 	BinaryBuilder = 
 	{
-		string Name = "Ginga3_Ground1",
-		uint64 ResourceId = 562ae3f1a82661db,
+		string Name = "Ginga3_Ground3",
+		uint64 ResourceId = 562ae692aa76a6cc,
 		string LoaderType = "MultiConvexMesh",
 		uint Version = 0,
 		string FilterTag = "",

@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Ginga3_Ground1",
-		uint64 ResourceId = 562ae3b99c21313b,
+		string Name = "Ginga3_Ground4",
+		uint64 ResourceId = 562ae4e033e9ac88,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 1997,
-		float OriginY = 583,
+		float OriginX = 1620,
+		float OriginY = 391,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,

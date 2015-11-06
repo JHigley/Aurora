@@ -8,4 +8,14 @@ class SavedTime : ZilchComponent
     
     [Serialized]   
     var Ginga3 : String = "00:00:00";
+    
+    
+    [Serialized]   
+    var Eternal1 : String = "00:00:00";
+
+    [Serialized]   
+    var Eternal2 : String = "00:00:00";
+    
+    [Serialized]   
+    var Eternal3 : String = "00:00:00";
 }

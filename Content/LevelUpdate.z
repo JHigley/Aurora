@@ -59,6 +59,7 @@ class LevelUpdate : ZilchComponent
                 this.Space.LoadLevel(this.Ginga3);
             }
             else if(this.Space.CurrentLevel == this.Ginga3){
+                this.Ginga_Complete = 1;
                 this.Space.LoadLevel(this.Menu);
             }
         }       

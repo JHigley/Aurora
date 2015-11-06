@@ -95,7 +95,7 @@ Level =
 		},
 		LevelUpdate = 
 		{
-			int Ginga_Complete = 0,
+			int Ginga_Complete = 1,
 			int Eternal_Complete = 0,
 			int Ooraka_Complete = 0,
 			int Cosmos_Complete = 0,
@@ -853,7 +853,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "560aa4e530f49a5a:SEGOEUI",
 			uint FontSize = 72,
-			string Text = "Ooraka Forest",
+			string Text = "---",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -925,7 +925,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "560aa4e530f49a5a:SEGOEUI",
 			uint FontSize = 72,
-			string Text = "The Cosmos",
+			string Text = "---",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
