@@ -1,6 +1,7 @@
 class Menu : ZilchComponent
 {
     var A1 : Level = Level.Find("Level");
+    var CR : Level = Level.Find("Credits");
     var AMenu : Level = Level.Find("AMenu");
     var MMenu : Level = Level.Find("Menu");
     
@@ -89,6 +90,11 @@ if(this.Space.CurrentLevel == this.MMenu){
      if(stgSel.Transform.Translation == this.Lev1){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
             this.Space.LoadLevel(this.AMenu);
+          }
+      }
+     if(stgSel.Transform.Translation == this.Lev6){
+         if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
+            this.Space.LoadLevel(this.CR);
           }
       }
       
