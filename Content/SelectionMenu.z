@@ -3,10 +3,14 @@ class SelectionMenu : ZilchComponent
     var G1 : Level = Level.Find("Ginga_1");
     var G2 : Level = Level.Find("Ginga_2");
     var G3 : Level = Level.Find("Ginga_3");
+    
+    var E1 : Level = Level.Find("Eternal_1");
+    
     var A2 : Level = Level.Find("Level2");
     var A3 : Level = Level.Find("Level3");
 
     var AMenu : Level = Level.Find("AMenu");
+    var EMenu : Level = Level.Find("EMenu");
     var MMenu : Level = Level.Find("Menu");
     var LSel : Integer = 1;
     
@@ -26,14 +30,6 @@ class SelectionMenu : ZilchComponent
       var lText = this.Space.FindObjectByName("LevelName");
       var icon = this.Space.FindObjectByName("icon");
 
-
- 
-if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
-    if(this.LSel == 1){
-        this.Space.LoadLevel(this.G1);
-    }
-}
-
 if (Zero.Keyboard.KeyIsPressed(Keys.Tilde)){
     this.Space.LoadLevel(this.MMenu);
 }
@@ -52,6 +48,7 @@ if (Zero.Keyboard.KeyIsPressed(Keys.Left)){
         }
 }
 
+if(this.Space.CurrentLevel == this.AMenu){
 if(this.LSel == 1){
     lText.SpriteText.Text = "Ginga Mountains 1";
     icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_1");
@@ -79,6 +76,39 @@ if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     if(this.LSel == 3){
         this.Space.LoadLevel(this.G3);
     }
+}
+}
+
+
+
+if(this.Space.CurrentLevel == this.EMenu){
+if(this.LSel == 1){
+    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_1");
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Eternal1`";
+}
+if(this.LSel == 2){
+    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_2"); 
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Eternal2`";
+}
+if(this.LSel == 3){
+    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_3");
+    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Eternal3`";
+}
+
+//Decorative Cogs
+    var cog1 = this.Space.FindObjectByName("Cog1");
+    var cog2 = this.Space.FindObjectByName("Cog2");
+
+    cog1.Transform.RotateAnglesWorld(Real3(0,0,0.1 * event.Dt));
+    cog2.Transform.RotateAnglesWorld(Real3(0,0,0.1 * event.Dt));
+   
+
+if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
+    if(this.LSel == 1){
+        this.Space.LoadLevel(this.E1);
+    }
+
+}
 }
 
     }
