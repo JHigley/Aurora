@@ -3,7 +3,7 @@ BinaryContent =
 	BinaryBuilder = 
 	{
 		string Name = "Eternal_Wall1",
-		uint64 ResourceId = 56558b45fe351a9d,
+		uint64 ResourceId = 565da871e17df3fe,
 		string LoaderType = "MultiConvexMesh",
 		uint Version = 0,
 		string FilterTag = "",

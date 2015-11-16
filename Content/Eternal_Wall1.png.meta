@@ -3,7 +3,7 @@ ImageContent =
 	SpriteSourceBuilder = 
 	{
 		string Name = "Eternal_Wall1",
-		uint64 ResourceId = 56558b22f4f10111,
+		uint64 ResourceId = 565da85adf2a2d50,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,

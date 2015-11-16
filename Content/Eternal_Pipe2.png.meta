@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Eternal_Ground1",
-		uint64 ResourceId = 565dadd467d563de,
+		string Name = "Eternal_Pipe2",
+		uint64 ResourceId = 565da0816e203253,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 979,
-		float OriginY = 369,
+		float OriginX = 69,
+		float OriginY = 336,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,
