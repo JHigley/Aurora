@@ -4,6 +4,8 @@ class StageTimer : ZilchComponent
     var Ginga1: Level = Level.Find("Ginga_1");
     var Ginga2: Level = Level.Find("Ginga_2");
     var Ginga3: Level = Level.Find("Ginga_3");
+    
+    var Eternal1: Level = Level.Find("Eternal_1");
 
         var Time : Real = 0;
         var Seconds : Real = 0;
@@ -72,6 +74,12 @@ this.Time += event.Dt;
             }
             if(this.Space.CurrentLevel == this.Ginga3){
                 this.DataCog.SavedTime.Ginga3 = curTime;
+                Zero.ObjectStore.Store("Data", this.DataCog);
+            }
+
+
+            if(this.Space.CurrentLevel == this.Eternal1){
+                this.DataCog.SavedTime.Eternal1 = curTime;
                 Zero.ObjectStore.Store("Data", this.DataCog);
             }
         }
