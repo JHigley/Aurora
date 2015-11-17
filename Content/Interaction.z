@@ -39,11 +39,15 @@ if(this.Space.CurrentLevel == this.A1){
     
 if(this.Space.CurrentLevel == this.E1){
     var cog1 = this.Space.FindObjectByName("Cog1");
+    var cog2 = this.Space.FindObjectByName("Cog2");
+    var cog3 = this.Space.FindObjectByName("Cog3");
 
    // var rotationSpeedRadians = Math.ToRadians(this.RotationSpeed);
 
     cog1.Transform.RotateAnglesWorld(Real3(0,0,0.1 * event.Dt));
-   
+    cog2.Transform.RotateAnglesWorld(Real3(0,0,-0.1 * event.Dt));
+    cog3.Transform.RotateAnglesWorld(Real3(0,0,0.2 * event.Dt));
+        
 }
 
 }
