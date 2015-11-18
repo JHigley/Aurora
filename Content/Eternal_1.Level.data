@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [71.9967575, 9.07042789, 50.0000076],
+			Vec3 Translation = [127.653061, -10.3539677, 50.0000114],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 67.0320663,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [71.9967575, 9.07042789, 7.26083317e-006],
+			Vec3 LookTarget = [127.653061, -10.3539677, 9.69365192e-006],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -835,7 +835,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ground1",
 		},
 		Transform = 
 		{
@@ -892,7 +892,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Wall1",
 		},
 		Transform = 
 		{
@@ -1677,7 +1677,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ground2",
 		},
 		Transform = 
 		{
@@ -1734,7 +1734,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pillar",
 		},
 		Transform = 
 		{
@@ -1769,7 +1769,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pillar",
 		},
 		Transform = 
 		{
@@ -1804,7 +1804,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pillar",
 		},
 		Transform = 
 		{
@@ -1839,7 +1839,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pipe",
 		},
 		Transform = 
 		{
@@ -1874,7 +1874,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pipe",
 		},
 		Transform = 
 		{
@@ -1909,7 +1909,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Wall3",
 		},
 		Transform = 
 		{
@@ -1966,7 +1966,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ground3",
 		},
 		Transform = 
 		{
@@ -2080,7 +2080,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ground4",
 		},
 		Transform = 
 		{
@@ -2197,7 +2197,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pipe",
 		},
 		Transform = 
 		{
@@ -2267,7 +2267,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Ground5",
 		},
 		Transform = 
 		{
@@ -2324,7 +2324,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Wall4",
 		},
 		Transform = 
 		{
@@ -2473,11 +2473,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pillar",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [124.764305, -13.7038422, 7.67433085e-006],
+			Vec3 Translation = [126, -13.7038422, 7.67433085e-006],
 			Vec3 Scale = [1, 1.10887086, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2508,7 +2508,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Pillar",
 		},
 		Transform = 
 		{

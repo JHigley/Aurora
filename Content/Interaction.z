@@ -3,6 +3,7 @@ class Interaction : ZilchComponent
     var A1 : Level = Level.Find("Level");
     
     var E1 : Level = Level.Find("Eternal_1");
+    var E2 : Level = Level.Find("Eternal_2");
     
    var RotationSpeed : Real = 5;
    
@@ -48,6 +49,16 @@ if(this.Space.CurrentLevel == this.E1){
     cog2.Transform.RotateAnglesWorld(Real3(0,0,-0.1 * event.Dt));
     cog3.Transform.RotateAnglesWorld(Real3(0,0,0.2 * event.Dt));
         
+}
+
+if(this.Space.CurrentLevel == this.E2){
+
+    var cube1 = this.Space.FindObjectByName("Cube1");
+    var cube2 = this.Space.FindObjectByName("Cube2");
+    
+    cube1.Transform.RotateAnglesWorld(Real3(0,0,1.1 * event.Dt));
+    cube2.Transform.RotateAnglesWorld(Real3(0,0,-1.1 * event.Dt));
+
 }
 
 }
