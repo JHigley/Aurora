@@ -114,7 +114,6 @@ if(this.Space.CurrentLevel == this.MMenu){
           }
       }
       
-Console.WriteLine("`this.Space.LevelSettings.LevelUpdate.Ginga_Complete`");
       
       if(this.Space.LevelSettings.LevelUpdate.Ginga_Complete == 1){
         this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("complete");
