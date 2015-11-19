@@ -5,6 +5,7 @@ class SelectionMenu : ZilchComponent
     var G3 : Level = Level.Find("Ginga_3");
     
     var E1 : Level = Level.Find("Eternal_1");
+    var E2 : Level = Level.Find("Eternal_2");
     
     var A2 : Level = Level.Find("Level2");
     var A3 : Level = Level.Find("Level3");
@@ -87,7 +88,7 @@ if(this.LSel == 1){
     this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Eternal1`";
 }
 if(this.LSel == 2){
-    icon.Sprite.SpriteSource = SpriteSource.Find("Ginga_2"); 
+    icon.Sprite.SpriteSource = SpriteSource.Find("Eternal_2"); 
     this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Eternal2`";
 }
 if(this.LSel == 3){
@@ -106,6 +107,9 @@ if(this.LSel == 3){
 if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     if(this.LSel == 1){
         this.Space.LoadLevel(this.E1);
+    }
+    if(this.LSel == 2){
+        this.Space.LoadLevel(this.E2);
     }
 
 }

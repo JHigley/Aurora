@@ -56,8 +56,12 @@ if(this.Space.CurrentLevel == this.E2){
     var cube1 = this.Space.FindObjectByName("Cube1");
     var cube2 = this.Space.FindObjectByName("Cube2");
     
-    cube1.Transform.RotateAnglesWorld(Real3(0,0,1.1 * event.Dt));
+    cube1.Transform.RotateAnglesWorld(Real3(0,0,0.5 * event.Dt));
     cube2.Transform.RotateAnglesWorld(Real3(0,0,-1.1 * event.Dt));
+    this.Space.FindObjectByName("Cog1").Transform.RotateAnglesWorld(Real3(0,0,0.7 * event.Dt));
+    this.Space.FindObjectByName("Cog2").Transform.RotateAnglesWorld(Real3(0,0,0.2 * event.Dt));
+    this.Space.FindObjectByName("Cog3").Transform.RotateAnglesWorld(Real3(0,0,0.6 * event.Dt));
+    this.Space.FindObjectByName("Wheel2").Transform.RotateAnglesWorld(Real3(0,0,-0.6 * event.Dt));
 
 }
 

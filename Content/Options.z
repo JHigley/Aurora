@@ -1,0 +1,16 @@
+class Options : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        var opFade = this.Space.FindObjectByName("fade");
+        var opFadeSeq = Action.Sequence(opFade.Actions);
+        
+        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

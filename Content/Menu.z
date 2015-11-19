@@ -5,6 +5,7 @@ class Menu : ZilchComponent
     var AMenu : Level = Level.Find("AMenu");
     var EMenu : Level = Level.Find("EMenu");
     var MMenu : Level = Level.Find("Menu");
+    var Options : Level = Level.Find("Options");
     
       var Lev1 : Real3 = Real3(20.4655, 10.93, 1);
       var Lev2 : Real3 = Real3(20.4655, 9.23, 1);
@@ -18,6 +19,7 @@ class Menu : ZilchComponent
 
 // Credits      
       var Lev6 : Real3 = Real3(20.4655, -12.87, 1);
+      var Opt : Real3 = Real3(20.4655, -14.57, 1);
       
       var Sel : Integer = 1;
       var LSel : Integer = 0;
@@ -50,22 +52,22 @@ if(this.Space.CurrentLevel == this.MMenu){
       if (Zero.Keyboard.KeyIsPressed(Keys.Up))
       {
       this.Sel -= 1;
-        if(this.Sel > 6){
+        if(this.Sel > 7){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 6;
+            this.Sel = 7;
         }
       }
       
       if (Zero.Keyboard.KeyIsPressed(Keys.Down))
       {
       this.Sel += 1;
-        if(this.Sel > 6){
+        if(this.Sel > 7){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 6;
+            this.Sel = 7;
         }
       }
       
@@ -87,6 +89,9 @@ if(this.Space.CurrentLevel == this.MMenu){
       if(this.Sel == 6){
           stgSel.Transform.Translation = this.Lev6;
       }
+      if(this.Sel == 7){
+          stgSel.Transform.Translation = this.Opt;
+      }
       
      if(stgSel.Transform.Translation == this.Lev1){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
@@ -101,6 +106,11 @@ if(this.Space.CurrentLevel == this.MMenu){
      if(stgSel.Transform.Translation == this.Lev6){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
             this.Space.LoadLevel(this.CR);
+          }
+      }
+     if(stgSel.Transform.Translation == this.Opt){
+         if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
+            this.Space.LoadLevel(this.Options);
           }
       }
       
