@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.6569939,
+			float Size = 54.8811989,
 		},
 		EditorCameraController = 
 		{
@@ -1104,7 +1104,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "560aa4e530f49a5a:SEGOEUI",
 			uint FontSize = 72,
-			string Text = "Credits",
+			string Text = "---",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,

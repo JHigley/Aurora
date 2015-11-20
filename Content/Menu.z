@@ -105,7 +105,7 @@ if(this.Space.CurrentLevel == this.MMenu){
       }
      if(stgSel.Transform.Translation == this.Lev6){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
-            this.Space.LoadLevel(this.CR);
+           // this.Space.LoadLevel(this.CR);
           }
       }
      if(stgSel.Transform.Translation == this.Opt){

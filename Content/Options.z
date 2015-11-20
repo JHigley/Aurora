@@ -1,16 +1,59 @@
 class Options : ZilchComponent
 {
+    
+    var Menu : Level = Level.Find("Menu");
+
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        var opFade = this.Space.FindObjectByName("fade");
-        var opFadeSeq = Action.Sequence(opFade.Actions);
+        var fade = this.Space.FindObjectByName("opFade");
+        var fadeSeq = Action.Sequence(fade.Actions);
         
-        Action.Property(opFadeSeq, @opFade.Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
+      Action.Property(this.Space.FindObjectByName("opFade").Actions, @this.Space.FindObjectByName("opFade").Sprite.Color, Real4(0,0,0,0), 1, Ease.QuadInOut);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+      if (Zero.Keyboard.KeyIsPressed(Keys.Tilde))
+      {
+      Action.Property(this.Space.FindObjectByName("edFade").Actions, @this.Space.FindObjectByName("edFade").Sprite.Color, Real4(0,0,0,2), 1, Ease.QuadInOut);
+      }
+      if(this.Space.FindObjectByName("edFade").Sprite.Color == Real4(0,0,0,2)){
+          this.Space.LoadLevel(this.Menu);
+      }
+      if (Zero.Keyboard.KeyIsPressed(Keys.Space))
+      {
+          this.Space.ReloadLevel();
+      }
+      
+        var player = this.Space.FindObjectByName("Sphere");
+        
+//Arrow Controls 
+        
+    var velocity = local Real3(0,0,0);
+
+      if (Zero.Keyboard.KeyIsDown(Keys.Right))
+      {
+          velocity += local Real3(0.8,0,0);
+      }
+      if (Zero.Keyboard.KeyIsDown(Keys.Left))
+      {
+          velocity += local Real3(-0.8,0,0);
+    }
+    
+if(player.RigidBody.Velocity.X <= -20){
+        velocity -= local Real3(-1,0,0);
+}
+
+if(player.RigidBody.Velocity.X >= 20){
+        velocity -= local Real3(1,0,0);
+}
+
+if(player.RigidBody.Velocity.Y <= -75){
+        velocity -= local Real3(0,-1,0);
+}
+ 
+    player.RigidBody.Velocity += velocity;
     }
 }

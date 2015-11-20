@@ -2,15 +2,15 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "l_arrow",
-		uint64 ResourceId = 56396d1c7c4aaf35,
+		string Name = "LeftArrow",
+		uint64 ResourceId = 5658690a55b2326d,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 0,
 		uint FrameSizeY = 0,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 53,
-		float OriginY = 120,
+		float OriginX = 62,
+		float OriginY = 117,
 		float PixelsPerUnit = 64,
 		bool Smoothing = true,
 		bool Looping = true,
