@@ -8,6 +8,7 @@ class LevelUpdate : ZilchComponent
     var Ginga3: Level = Level.Find("Ginga_3");
     var Eternal1: Level = Level.Find("Eternal_1");
     var Eternal2: Level = Level.Find("Eternal_2");
+    var Eternal3: Level = Level.Find("Eternal_3");
     
     var Menu : Level = Level.Find("Menu");
     
@@ -69,6 +70,9 @@ class LevelUpdate : ZilchComponent
                 this.Space.LoadLevel(this.Eternal2);
             }
             if(this.Space.CurrentLevel == this.Eternal2){
+                this.Space.LoadLevel(this.Eternal3);
+            }
+            if(this.Space.CurrentLevel == this.Eternal3){
                 this.Space.LoadLevel(this.Menu);
             }
         }       

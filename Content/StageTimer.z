@@ -7,6 +7,7 @@ class StageTimer : ZilchComponent
     
     var Eternal1: Level = Level.Find("Eternal_1");
     var Eternal2: Level = Level.Find("Eternal_2");
+    var Eternal3: Level = Level.Find("Eternal_3");
 
         var Time : Real = 0;
         var Seconds : Real = 0;
@@ -85,6 +86,10 @@ this.Time += event.Dt;
             }
             if(this.Space.CurrentLevel == this.Eternal2){
                 this.DataCog.SavedTime.Eternal2 = curTime;
+                Zero.ObjectStore.Store("Data", this.DataCog);
+            }
+            if(this.Space.CurrentLevel == this.Eternal3){
+                this.DataCog.SavedTime.Eternal3 = curTime;
                 Zero.ObjectStore.Store("Data", this.DataCog);
             }
         }
