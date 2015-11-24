@@ -18,4 +18,25 @@ class SavedTime : ZilchComponent
     
     [Serialized]   
     var Eternal3 : String = "00:00:00";
+    
+    
+    [Serialized]   
+    var Ooraka1 : String = "00:00:00";
+
+    [Serialized]   
+    var Ooraka2 : String = "00:00:00";
+    
+    [Serialized]   
+    var Ooraka3 : String = "00:00:00";
+    
+    
+    [Serialized]   
+    var Cosmos1 : String = "00:00:00";
+
+    [Serialized]   
+    var Cosmos2 : String = "00:00:00";
+    
+    [Serialized]   
+    var Cosmos3 : String = "00:00:00";
+
 }

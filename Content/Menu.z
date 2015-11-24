@@ -4,6 +4,7 @@ class Menu : ZilchComponent
     var CR : Level = Level.Find("Credits");
     var AMenu : Level = Level.Find("AMenu");
     var EMenu : Level = Level.Find("EMenu");
+    var OMenu : Level = Level.Find("OMenu");
     var MMenu : Level = Level.Find("Menu");
     var Options : Level = Level.Find("Options");
     
@@ -103,6 +104,11 @@ if(this.Space.CurrentLevel == this.MMenu){
             this.Space.LoadLevel(this.EMenu);
           }
       }
+     if(stgSel.Transform.Translation == this.Lev3){
+         if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
+            this.Space.LoadLevel(this.OMenu);
+          }
+      }
      if(stgSel.Transform.Translation == this.Lev6){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
            // this.Space.LoadLevel(this.CR);
@@ -116,6 +122,13 @@ if(this.Space.CurrentLevel == this.MMenu){
       
       
       if(this.Space.LevelSettings.LevelUpdate.Ginga_Complete == 1){
+        this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("complete");
+      }
+      else{
+        this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("incomplete");
+      }
+      
+      if(this.Space.LevelSettings.LevelUpdate.Eternal_Complete == 1){
         this.Space.FindObjectByName("Icon1").Sprite.SpriteSource = SpriteSource.Find("complete");
       }
       else{

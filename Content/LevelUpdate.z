@@ -9,6 +9,12 @@ class LevelUpdate : ZilchComponent
     var Eternal1: Level = Level.Find("Eternal_1");
     var Eternal2: Level = Level.Find("Eternal_2");
     var Eternal3: Level = Level.Find("Eternal_3");
+//    var Ooraka1: Level = Level.Find("Ooraka_1");
+//    var Ooraka2: Level = Level.Find("Ooraka_2");
+//    var Ooraka3: Level = Level.Find("Ooraka_3");
+//  var Cosmos1: Level = Level.Find("Cosmos_1");
+//  var Cosmos2: Level = Level.Find("Cosmos_2");
+//  var Cosmos3: Level = Level.Find("Cosmos_3");
     
     var Menu : Level = Level.Find("Menu");
     
@@ -75,6 +81,28 @@ class LevelUpdate : ZilchComponent
             if(this.Space.CurrentLevel == this.Eternal3){
                 this.Space.LoadLevel(this.Menu);
             }
+            
+/*            if(this.Space.CurrentLevel == this.Ooraka1){
+                this.Space.LoadLevel(this.Ooraka2);
+            }
+            if(this.Space.CurrentLevel == this.Ooraka2){
+                this.Space.LoadLevel(this.Ooraka3);
+            }
+            if(this.Space.CurrentLevel == this.Ooraka3){
+                this.Space.LoadLevel(this.Menu);
+            }
+*/
+/*            
+            if(this.Space.CurrentLevel == this.Cosmos1){
+                this.Space.LoadLevel(this.Cosmos2);
+            }
+            if(this.Space.CurrentLevel == this.Cosmos2){
+                this.Space.LoadLevel(this.Cosmos3);
+            }
+            if(this.Space.CurrentLevel == this.Cosmos3){
+                this.Space.LoadLevel(this.Menu);
+            }
+*/
         }       
 
     }

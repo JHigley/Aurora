@@ -70,11 +70,16 @@ if(this.Space.CurrentLevel == this.E3){
 
     var cube1 = this.Space.FindObjectByName("Cube1");
     var cube2 = this.Space.FindObjectByName("Cube2");
+    var cube3 = this.Space.FindObjectByName("Cube3");
     
     cube1.Transform.RotateAnglesWorld(Real3(0,0,0.5 * event.Dt));
     cube2.Transform.RotateAnglesWorld(Real3(0,0,-0.5 * event.Dt));
+    cube3.Transform.RotateAnglesWorld(Real3(0,0,1.0 * event.Dt));
 
     this.Space.FindObjectByName("Cog1").Transform.RotateAnglesWorld(Real3(0,0,-0.4 * event.Dt));
+    this.Space.FindObjectByName("Cog2").Transform.RotateAnglesWorld(Real3(0,0,-0.3 * event.Dt));
+    this.Space.FindObjectByName("Cog3").Transform.RotateAnglesWorld(Real3(0,0,-0.7 * event.Dt));
+    this.Space.FindObjectByName("Cog4").Transform.RotateAnglesWorld(Real3(0,0,0.4 * event.Dt));
 
 }
 
