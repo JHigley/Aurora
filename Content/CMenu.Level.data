@@ -118,7 +118,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [9.89427185, -11.5916662, 49.9990005],
+			Vec3 Translation = [-2.59558558, 4.47886992, 49.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -130,7 +130,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.0320358,
+			float Size = 100,
 		},
 		EditorCameraController = 
 		{
@@ -138,7 +138,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [9.89427185, -11.5916662, -0.00100011018],
+			Vec3 LookTarget = [-2.59558558, 4.47886992, -0.00100053498],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -766,13 +766,13 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.863565445, -5.45518303, -2],
-			Vec3 Scale = [1.08038306, 1.30535746, 1],
+			Vec3 Translation = [-0.863565445, -8.24465942, -2],
+			Vec3 Scale = [1.08038306, 1.57114685, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
-			bool Visible = false,
+			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -780,7 +780,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "562c2bd8ddab5a05:Ginga_BG6",
+			string SpriteSource = "564b54a4d4ba552c:Cosmos_BG2",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,

@@ -3,15 +3,15 @@ class Menu : ZilchComponent
     var A1 : Level = Level.Find("Level");
     var CR : Level = Level.Find("Credits");
     var AMenu : Level = Level.Find("AMenu");
+    var CMenu : Level = Level.Find("CMenu");
     var EMenu : Level = Level.Find("EMenu");
-    var OMenu : Level = Level.Find("OMenu");
     var MMenu : Level = Level.Find("Menu");
     var Options : Level = Level.Find("Options");
     
       var Lev1 : Real3 = Real3(20.4655, 10.93, 1);
       var Lev2 : Real3 = Real3(20.4655, 9.23, 1);
       var Lev3 : Real3 = Real3(20.4655, 7.53, 1);
-      var Lev4 : Real3 = Real3(20.4655, 5.83, 1);
+      var Lev4 : Real3 = Real3(20.4655, -12.87, 1);
       var Lev5 : Real3 = Real3(20.4655, 4.13, 1);
 
 // Reserved slot      
@@ -53,22 +53,22 @@ if(this.Space.CurrentLevel == this.MMenu){
       if (Zero.Keyboard.KeyIsPressed(Keys.Up))
       {
       this.Sel -= 1;
-        if(this.Sel > 7){
+        if(this.Sel > 5){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 7;
+            this.Sel = 5;
         }
       }
       
       if (Zero.Keyboard.KeyIsPressed(Keys.Down))
       {
       this.Sel += 1;
-        if(this.Sel > 7){
+        if(this.Sel > 5){
             this.Sel = 1;
         }
         if(this.Sel < 1){
-            this.Sel = 7;
+            this.Sel = 5;
         }
       }
       
@@ -85,12 +85,6 @@ if(this.Space.CurrentLevel == this.MMenu){
           stgSel.Transform.Translation = this.Lev4;
       }
       if(this.Sel == 5){
-          stgSel.Transform.Translation = this.Lev5;
-      }
-      if(this.Sel == 6){
-          stgSel.Transform.Translation = this.Lev6;
-      }
-      if(this.Sel == 7){
           stgSel.Transform.Translation = this.Opt;
       }
       
@@ -106,10 +100,10 @@ if(this.Space.CurrentLevel == this.MMenu){
       }
      if(stgSel.Transform.Translation == this.Lev3){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
-            this.Space.LoadLevel(this.OMenu);
+            this.Space.LoadLevel(this.CMenu);
           }
       }
-     if(stgSel.Transform.Translation == this.Lev6){
+     if(stgSel.Transform.Translation == this.Lev4){
          if(Zero.Keyboard.KeyIsDown(Keys.Enter)){
            // this.Space.LoadLevel(this.CR);
           }

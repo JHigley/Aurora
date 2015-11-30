@@ -8,10 +8,6 @@ class SelectionMenu : ZilchComponent
     var E2 : Level = Level.Find("Eternal_2");
     var E3 : Level = Level.Find("Eternal_3");
     
-//    var O1 : Level = Level.Find("Ooraka_1");
-//    var O2 : Level = Level.Find("Ooraka_2");
-//    var O3 : Level = Level.Find("Ooraka_3");
-    
 //    var C1 : Level = Level.Find("Cosmos_1");
 //    var C2 : Level = Level.Find("Cosmos_2");
 //    var C3 : Level = Level.Find("Cosmos_3");
@@ -21,7 +17,6 @@ class SelectionMenu : ZilchComponent
 
     var AMenu : Level = Level.Find("AMenu");
     var EMenu : Level = Level.Find("EMenu");
-    var OMenu : Level = Level.Find("OMenu");
     var CMenu : Level = Level.Find("CMenu");
     var MMenu : Level = Level.Find("Menu");
     var LSel : Integer = 1;
@@ -124,37 +119,6 @@ if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     }
     if(this.LSel == 3){
         this.Space.LoadLevel(this.E3);
-    }
-
-}
-}
-
-
-
-if(this.Space.CurrentLevel == this.OMenu){
-if(this.LSel == 1){
-    icon.Sprite.SpriteSource = SpriteSource.Find("DefaultSprite");
-    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ooraka1`";
-}
-if(this.LSel == 2){
-    icon.Sprite.SpriteSource = SpriteSource.Find("DefaultSprite"); 
-    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ooraka2`";
-}
-if(this.LSel == 3){
-    icon.Sprite.SpriteSource = SpriteSource.Find("DefaultSprite");
-    this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Ooraka3`";
-}
-
-
-if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
-    if(this.LSel == 1){
-       //this.Space.LoadLevel(this.O1);
-    }
-    if(this.LSel == 2){
-       // this.Space.LoadLevel(this.O2);
-    }
-    if(this.LSel == 3){
-       // this.Space.LoadLevel(this.O3);
     }
 
 }

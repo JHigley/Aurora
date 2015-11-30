@@ -114,7 +114,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.841835, -3.65287971, 50],
+			Vec3 Translation = [11.3378439, -2.20074368, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -126,7 +126,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 54.8811989,
+			float Size = 44.9329338,
 		},
 		EditorCameraController = 
 		{
@@ -134,7 +134,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [18.841835, -3.65287971, 8.23602761e-007],
+			Vec3 LookTarget = [11.3378439, -2.20074368, 4.95592928e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -835,6 +835,11 @@ Level =
 		{
 			string Name = "Ooraka",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [15.3000002, 8.30000019, -3.53902578e-007],
@@ -843,7 +848,7 @@ Level =
 		},
 		SpriteText = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -909,7 +914,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [15.3000002, 6.5999999, -3.53902578e-007],
+			Vec3 Translation = [15.3000002, 8.30000019, -3.53902578e-007],
 			Vec3 Scale = [0.99999994, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -925,7 +930,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "560aa4e530f49a5a:SEGOEUI",
 			uint FontSize = 72,
-			string Text = "---",
+			string Text = "The Cosmos",
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
@@ -979,6 +984,11 @@ Level =
 		{
 			string Name = "North",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
 		Transform = 
 		{
 			Vec3 Translation = [15.3000002, 4.9000001, -3.53902578e-007],
@@ -987,7 +997,7 @@ Level =
 		},
 		SpriteText = 
 		{
-			bool Visible = true,
+			bool Visible = false,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
@@ -1014,6 +1024,11 @@ Level =
 				{
 					string Name = "Icon",
 				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
 				Transform = 
 				{
 					Vec3 Translation = [9.76506138, -0.76457119, 5.23403287e-007],
@@ -1022,7 +1037,7 @@ Level =
 				},
 				Sprite = 
 				{
-					bool Visible = true,
+					bool Visible = false,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
