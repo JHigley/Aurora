@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "Cosmos_Star1",
+		uint64 ResourceId = 564a1e6d791c26fe,
+		string LoaderType = "MultiConvexMesh",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "",
+	},
+},
