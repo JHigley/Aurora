@@ -13,7 +13,7 @@ class StageTimer : ZilchComponent
 //    var Ooraka2: Level = Level.Find("Ooraka_2");
 //    var Ooraka3: Level = Level.Find("Ooraka_3");
     
-//    var Cosmos1: Level = Level.Find("Cosmos_1");
+    var Cosmos1: Level = Level.Find("Cosmos_1");
 //    var Cosmos2: Level = Level.Find("Cosmos_2");
 //    var Cosmos3: Level = Level.Find("Cosmos_3");
 
@@ -115,12 +115,12 @@ this.Time += event.Dt;
             }
 */
 
-/*
+
             if(this.Space.CurrentLevel == this.Cosmos1){
                 this.DataCog.SavedTime.Cosmos1 = curTime;
                 Zero.ObjectStore.Store("Data", this.DataCog);
             }
-            if(this.Space.CurrentLevel == this.Cosmos2){
+/*            if(this.Space.CurrentLevel == this.Cosmos2){
                 this.DataCog.SavedTime.Cosmos2 = curTime;
                 Zero.ObjectStore.Store("Data", this.DataCog);
             }

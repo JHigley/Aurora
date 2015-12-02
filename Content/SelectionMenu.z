@@ -8,7 +8,7 @@ class SelectionMenu : ZilchComponent
     var E2 : Level = Level.Find("Eternal_2");
     var E3 : Level = Level.Find("Eternal_3");
     
-//    var C1 : Level = Level.Find("Cosmos_1");
+    var C1 : Level = Level.Find("Cosmos_1");
 //    var C2 : Level = Level.Find("Cosmos_2");
 //    var C3 : Level = Level.Find("Cosmos_3");
     
@@ -128,7 +128,7 @@ if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
 
 if(this.Space.CurrentLevel == this.CMenu){
 if(this.LSel == 1){
-    icon.Sprite.SpriteSource = SpriteSource.Find("DefaultSprite");
+    icon.Sprite.SpriteSource = SpriteSource.Find("Cosmos_1");
     this.Space.FindObjectByName("bTime").SpriteText.Text = "`this.DataCog.SavedTime.Cosmos1`";
 }
 if(this.LSel == 2){
@@ -141,9 +141,11 @@ if(this.LSel == 3){
 }
 
 
+    Action.Property(this.Space.FindObjectByName("Glow1").Actions, @this.Space.FindObjectByName("Glow1").Sprite.Color, Real4(250,250,250,1), 0.2, Ease.QuadInOut);
+
 if(Zero.Keyboard.KeyIsPressed(Keys.Enter)){
     if(this.LSel == 1){
-       //this.Space.LoadLevel(this.C1);
+       this.Space.LoadLevel(this.C1);
     }
     if(this.LSel == 2){
        // this.Space.LoadLevel(this.C2);
