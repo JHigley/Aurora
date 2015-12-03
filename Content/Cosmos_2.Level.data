@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [88.8723297, 3.09631777, 50.0000038],
+			Vec3 Translation = [-5.95529747, 8.50644016, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-008, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 44.3958549,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [88.8723297, 3.09631777, 4.55528107e-006],
+			Vec3 LookTarget = [-5.95529747, 8.50644016, 3.33299198e-007],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -226,7 +226,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-26.6581783, -4.18999004, 0],
+			Vec3 Translation = [-27.7928467, -8.29886436, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -426,8 +426,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [142.5, 24.2385616, 1.49011612e-007],
-			Vec3 Scale = [0.776268005, 42.1026764, 1],
+			Vec3 Translation = [142.5, 15.7492599, 1.49011612e-007],
+			Vec3 Scale = [0.776268005, 59.0812759, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -558,8 +558,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [64.3616867, 21.9501057, 0],
-			Vec3 Scale = [201.062347, 2, 1],
+			Vec3 Translation = [63.7690849, 21.9501057, 0],
+			Vec3 Scale = [202.247513, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -615,8 +615,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-29.4231358, 7.06389236, 0],
-			Vec3 Scale = [2, 60.9587059, 1],
+			Vec3 Translation = [-29.4231358, 3.47348404, 0],
+			Vec3 Scale = [2, 53.7778893, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -710,8 +710,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [60.421669, -3.74130249, -1],
-			Vec3 Scale = [3.64802313, 1.44440222, 1],
+			Vec3 Translation = [60.421669, -6.951828, -1],
+			Vec3 Scale = [3.64802313, 1.60492826, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -724,7 +724,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "564b56027d97b7d6:Cosmos_BG1",
+			string SpriteSource = "564b54a4d4ba552c:Cosmos_BG2",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1237,13 +1237,13 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Stars",
+			string Name = "RStar1",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-22.5680008, -7.14716005, -2.66358256e-007],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, -0.0523359589, 0.99862951],
+			Vec3 Translation = [-7.64741802, 0.0617666245, -2.68220901e-007],
+			Vec3 Scale = [0.300000012, 0.300000012, 1],
+			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
 		{
@@ -2022,6 +2022,120 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 49,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.0518488884, -5.35024071, 1.54972076e-006],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0.98480773, 0.173648223],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56774fe75c872542:Cosmos_Moon",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		MultiConvexMeshCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			string MeshName = "56774f33696180a5:Cosmos_Moon",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 50,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-20, -10.5582952, 1.28056854e-008],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "56775f0ddb6fbc3f:Cosmos2_Ground1",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		MultiConvexMeshCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			string MeshName = "56775f52e2cf2911:Cosmos2_Ground1",
 		},
 	},
 },

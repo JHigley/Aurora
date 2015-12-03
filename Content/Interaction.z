@@ -7,6 +7,7 @@ class Interaction : ZilchComponent
     var E3 : Level = Level.Find("Eternal_3");
     
     var C1 : Level = Level.Find("Cosmos_1");
+    var C2 : Level = Level.Find("Cosmos_2");
     
    var RotationSpeed : Real = 5;
    
@@ -90,6 +91,13 @@ if(this.Space.CurrentLevel == this.C1){
 
     this.Space.FindObjectByName("RStar1").Transform.RotateAnglesWorld(Real3(0,0,0.6 * event.Dt));
     this.Space.FindObjectByName("RStar2").Transform.RotateAnglesWorld(Real3(0,0,-0.6 * event.Dt));
+
+}
+
+if(this.Space.CurrentLevel == this.C2){
+
+    this.Space.FindObjectByName("RStar1").Transform.RotateAnglesWorld(Real3(0,0,-3.0 * event.Dt));
+ //   this.Space.FindObjectByName("RStar2").Transform.RotateAnglesWorld(Real3(0,0,-0.7 * event.Dt));
 
 }
 
