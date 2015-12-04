@@ -1,6 +1,7 @@
 class Interaction : ZilchComponent
 {
     var A1 : Level = Level.Find("Level");
+    var CR : Level = Level.Find("Credits");
     
     var E1 : Level = Level.Find("Eternal_1");
     var E2 : Level = Level.Find("Eternal_2");
@@ -96,8 +97,18 @@ if(this.Space.CurrentLevel == this.C1){
 
 if(this.Space.CurrentLevel == this.C2){
 
-    this.Space.FindObjectByName("RStar1").Transform.RotateAnglesWorld(Real3(0,0,-3.0 * event.Dt));
- //   this.Space.FindObjectByName("RStar2").Transform.RotateAnglesWorld(Real3(0,0,-0.7 * event.Dt));
+    this.Space.FindObjectByName("RStar1").Transform.RotateAnglesWorld(Real3(0,0,-0.3 * event.Dt));
+    this.Space.FindObjectByName("RStar2").Transform.RotateAnglesWorld(Real3(0,0,-0.7 * event.Dt));
+    this.Space.FindObjectByName("RStar3").Transform.RotateAnglesWorld(Real3(0,0,0.5 * event.Dt));
+    this.Space.FindObjectByName("RStar4").Transform.RotateAnglesWorld(Real3(0,0,0.6 * event.Dt));
+    this.Space.FindObjectByName("RStar5").Transform.RotateAnglesWorld(Real3(0,0,-0.4 * event.Dt));
+
+}
+
+if(this.Space.CurrentLevel == this.CR){
+
+    this.Space.FindObjectByName("Cog1").Transform.RotateAnglesWorld(Real3(0,0,1.0 * event.Dt));
+
 
 }
 

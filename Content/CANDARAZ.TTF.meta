@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "CANDARAZ",
+		uint64 ResourceId = 567618ad5948001b,
+	},
+},

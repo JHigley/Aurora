@@ -61,7 +61,7 @@ if(player.RigidBody.Velocity.Y <= -75){
               } 
       }
 //debug grav
-      else if(Zero.Keyboard.KeyIsDown(Keys.D)){
+      else if(Zero.Keyboard.KeyIsDown(Keys.NumPad9)){
          Action.Property(player.Actions, @player.Sprite.Color, Real4(0.3,0,0.3,1), 0.1, Ease.QuadInOut);
          this.LevelSettings.GravityEffect.Direction = Real3(0,10,0);
       }

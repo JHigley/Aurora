@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "CANDARAI",
+		uint64 ResourceId = 567618ad594a58dd,
+	},
+},
